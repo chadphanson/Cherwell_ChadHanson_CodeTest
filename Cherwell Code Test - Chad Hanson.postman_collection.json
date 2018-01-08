@@ -1,0 +1,66 @@
+{
+	"info": {
+		"name": "Cherwell Code Test - Chad Hanson",
+		"_postman_id": "10551335-a811-b1a0-c2ad-38164b87d70e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Coordinates By Row And Column",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:49425/api/triangles/getcoordinatesbyrowandcolumn/B/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49425",
+					"path": [
+						"api",
+						"triangles",
+						"getcoordinatesbyrowandcolumn",
+						"B",
+						"5"
+					]
+				},
+				"description": "Gets a triangle's coordinates from a row and column."
+			},
+			"response": []
+		},
+		{
+			"name": "Get Row And Column By Coordinates copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    \"10, 0\",\n    \"0, 0\",\n    \"10, -10\"\n]"
+				},
+				"url": {
+					"raw": "http://localhost:49425/api/triangles/getrowandcolumnbycoordinates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49425",
+					"path": [
+						"api",
+						"triangles",
+						"getrowandcolumnbycoordinates"
+					]
+				},
+				"description": "Gets the row and column of a triangle based on a set of coordinates."
+			},
+			"response": []
+		}
+	]
+}
